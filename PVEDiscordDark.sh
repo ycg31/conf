@@ -53,7 +53,7 @@ else
 fi
 
 if [ "$OFFLINE" = false ]; then
-    curl -sSf -f https://ghproxy.com/https://raw.githubusercontent.com/ &> /dev/null || {
+    curl -sSf -f https://ghproxy.com &> /dev/null || {
         echo -e >&2 "${BRED}Could not establish a connection to GitHub (https://ghproxy.com/https://raw.githubusercontent.com)${REG}";
         exit 1;
     }
